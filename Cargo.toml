@@ -1,0 +1,21 @@
+[package]
+name = "standard-parser"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+winnow = "0.7.11"
+wit-bindgen-rt = { version = "0.42.1", features = ["bitflags"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component.target]
+registry = "ghcr.io/promptrs"
+package = "promptrs:core"
+version = "0.1.0"
+world = "parser"
+
+[package.metadata.component.dependencies]
